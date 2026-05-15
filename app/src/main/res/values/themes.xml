@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.VidyarthiBus"
+        parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="colorAccent">@color/accent</item>
+        <item name="android:windowBackground">@color/background</item>
+        <item name="android:statusBarColor">@color/primary_dark</item>
+        <item name="android:windowAnimationStyle">
+            @style/WindowAnimationStyle
+        </item>
+    </style>
+
+    <!-- Smooth slide animations -->
+    <style name="WindowAnimationStyle"
+        parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">
+            @anim/slide_in_right
+        </item>
+        <item name="android:activityOpenExitAnimation">
+            @anim/slide_out_left
+        </item>
+        <item name="android:activityCloseEnterAnimation">
+            @anim/slide_in_left
+        </item>
+        <item name="android:activityCloseExitAnimation">
+            @anim/slide_out_right
+        </item>
+    </style>
+
+    <style name="AppButton"
+        parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/primary</item>
+        <item name="android:textColor">@color/text_white</item>
+        <item name="android:textSize">16sp</item>
+        <item name="cornerRadius">8dp</item>
+    </style>
+
+    <style name="AppButton.Red">
+        <item name="backgroundTint">@color/crowd_full</item>
+    </style>
+
+    <style name="AppButton.Green">
+        <item name="backgroundTint">@color/crowd_empty</item>
+    </style>
+
+    <style name="AppButton.Amber">
+        <item name="backgroundTint">@color/crowd_seated</item>
+    </style>
+
+</resources>

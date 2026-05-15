@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary">
+
+    <!-- App Logo / Icon -->
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="180dp"
+        android:src="@mipmap/ic_launcher_round"/>
+
+    <!-- App Name -->
+    <TextView
+        android:id="@+id/tvAppName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imgLogo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:text="Vidyarthi Bus"
+        android:textColor="@color/text_white"
+        android:textSize="32sp"
+        android:textStyle="bold"/>
+
+    <!-- Tagline -->
+    <TextView
+        android:id="@+id/tvTagline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvAppName"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:text="Students helping students 🚌"
+        android:textColor="@color/text_white"
+        android:textSize="16sp"/>
+
+    <!-- Role Selection Buttons -->
+    <LinearLayout
+        android:id="@+id/layoutButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="60dp"
+        android:layout_marginHorizontal="32dp"
+        android:orientation="vertical">
+
+        <!-- I'm on the Bus button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnReporter"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="@string/btn_reporter"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            app:strokeColor="@color/white"
+            app:cornerRadius="12dp"
+            android:layout_marginBottom="16dp"
+            xmlns:app="http://schemas.android.com/apk/res-auto"/>
+
+        <!-- I'm Waiting button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnWatcher"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="⏳  I'm Waiting at a Stop"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            app:strokeColor="@color/white"
+            app:cornerRadius="12dp"
+            xmlns:app="http://schemas.android.com/apk/res-auto"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

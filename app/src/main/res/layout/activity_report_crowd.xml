@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <!-- Top Bar -->
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@color/primary"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="16dp"
+        android:orientation="horizontal">
+
+        <!-- Back Button -->
+        <TextView
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="‹"
+            android:textColor="@color/white"
+            android:textSize="32sp"
+            android:paddingEnd="12dp"/>
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Report Crowd Status"
+            android:textColor="@color/text_white"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <!-- Route Name -->
+    <TextView
+        android:id="@+id/tvRouteName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/topBar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:text="Route Name"
+        android:textColor="@color/text_primary"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <!-- Instruction -->
+    <TextView
+        android:id="@+id/tvInstruction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvRouteName"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:text="How crowded is the bus right now?"
+        android:textColor="@color/text_secondary"
+        android:textSize="14sp"/>
+
+    <!-- Crowd Buttons Layout -->
+    <LinearLayout
+        android:id="@+id/layoutButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvInstruction"
+        android:layout_marginTop="40dp"
+        android:layout_marginHorizontal="24dp"
+        android:orientation="vertical">
+
+        <!-- EMPTY Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnEmpty"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:text="🟢  EMPTY — Lots of seats!"
+            android:textSize="18sp"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:backgroundTint="@color/crowd_empty"
+            app:cornerRadius="16dp"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- SEATED Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSeated"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:text="🟡  SEATED — Some seats left"
+            android:textSize="18sp"
+            android:textAllCaps="false"
+            android:textColor="@color/text_primary"
+            app:backgroundTint="@color/crowd_seated"
+            app:cornerRadius="16dp"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- FULL Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnFull"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:text="🔴  FULL — No seats!"
+            android:textSize="18sp"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:backgroundTint="@color/crowd_full"
+            app:cornerRadius="16dp"/>
+
+    </LinearLayout>
+
+    <!-- Location Check Message -->
+    <TextView
+        android:id="@+id/tvLocationCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layoutButtons"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:text="📍 Checking your location..."
+        android:textColor="@color/text_secondary"
+        android:textSize="13sp"
+        android:visibility="gone"/>
+
+    <!-- Progress Bar -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layoutButtons"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:visibility="gone"/>
+
+    <!-- Last Report Info -->
+    <TextView
+        android:id="@+id/tvLastReport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="32dp"
+        android:text="No reports yet for this route"
+        android:textColor="@color/text_secondary"
+        android:textSize="13sp"/>
+
+</RelativeLayout>
